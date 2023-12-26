@@ -6,7 +6,7 @@ const resetBtn = document.getElementById("resetBtn");
 
 // Default theme
 let chathams_blue = "#1A4B84";
-
+ 
 // function that sets the content
 function setContent() {
   const content = `
@@ -38,20 +38,18 @@ function setContent() {
 }
 
 // delay
-function wait(ms = 0) {
+function wait(ms = 1) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
 // get random number
-function getRandomBetween(min = 20, max = 150, randomNumber = Math.random()) {
+function getRandomBetween(min = 70, max = 250, randomNumber = Math.random()) {
   return Math.floor(randomNumber * (max - min) + min);
 }
 // recursion
 function draw(el) {
   let index = 1;
   const text = el.textContent;
-  const { typeMin, typeMax } = el.dataset;
-
+  const {typeMin, typeMax } = el.dataset;
   async function drawLetter() {
     el.textContent = text.slice(0, index);
     index += 1;
@@ -59,10 +57,9 @@ function draw(el) {
     await wait(amountOfTimeToWait);
     if (index <= text.length) {
       drawLetter();
-    }
-  }
-
-  drawLetter();
+ }
+}
+  drawLetter();  
 }
 // restart the effect
 function restartTypeEffect(params) {

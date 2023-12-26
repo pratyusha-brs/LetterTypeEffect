@@ -130,17 +130,28 @@ header h3 {
 }
 
 header h4 {
-    font: normal normal 600 18px/28px Oswald;
+    font: normal normal 600 30px/45px Oswald;
     letter-spacing: 0.36px;
     color: #191919;
     text-transform: uppercase;
 }
 
 header p {
-    font: 600 12px/15px Poppins;
+    font: 600 18px/28px Poppins;
     letter-spacing: 0.24px;
     color: #191919;
 }
+header a{
+position: relative;
+font: 600 18px/28px Poppins;
+letter-spacing: 0.24px;
+color:#fff;
+
+}
+.btn-spacing{
+    margin-bottom: 20px;
+}
+
 
 .ReactTitle {
     background-color: #838383;
